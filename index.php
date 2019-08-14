@@ -2,9 +2,9 @@
     session_start();
     require "connect.php";
 
-    // if(!isset($_SESSION['c_id'])){
-    //     header("Location:login.php");
-    // }
+    if(!isset($_SESSION['c_id'])){
+        header("Location:login.php");
+    }
 
     echo $_SESSION['s_id'];
     echo $_SESSION['s_email'];
@@ -19,8 +19,8 @@
         // email account
         'email' => array(
             'hostname' => '{127.0.0.1:143/notls}INBOX',
-            'username' => "user3@itmail.com",
-            'password' => "1234"
+            'username' => $_SERVER['s_email'],
+            'password' => $_SERVER['s_password']
         ),
         // inbox pagination
         'pagination' => array(
