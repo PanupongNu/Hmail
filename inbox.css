@@ -1,0 +1,16 @@
+body {
+    margin: 1ch;
+}
+
+.table-row{
+    cursor:pointer;
+    }
+
+
+
+
+    a:hover {
+        text-decoration: none;
+      }
+
+
